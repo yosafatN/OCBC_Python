@@ -1,0 +1,52 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger Rest Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+paths:
+  /avocado:
+    get:
+      operationId: avocado.read_all
+      tags:
+        - Avocado
+      summary: Read the entire set of avocado, sorted by date
+      description: Read the entire set of avocado, sorted by date
+      responses:
+        200:
+          description: Successfully read avocado set operation
+          schema:
+            type: array
+            items:
+              properties:
+                date:
+                  type: string
+                  description: Date of the Avocado
+                avgprice:
+                  type: number
+                  format: double
+                  description: Price of the Avocado
+                totalvol:
+                  type: integer
+                  description: total of the Avocado
+                avo_a:
+                  type: integer
+                  description: Avocado A
+                avo_b:
+                  type: integer
+                  description: Avocado B
+                avo_c:
+                  type: integer
+                  description: Avocado C
+                type:
+                  type: integer
+                  description: type of Avocado
+                regionid:
+                  type: integer
+                  description: region id of Avocado
